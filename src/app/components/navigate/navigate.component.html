@@ -1,0 +1,39 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+
+        <button mat-menu-item>
+             <mat-icon>home</mat-icon>
+              <span>Home</span>
+          </button>
+
+        <button mat-menu-item>
+            <mat-icon>face</mat-icon>
+            <span>Clientes</span>
+          </button>
+
+        <button mat-menu-item>
+            <mat-icon>credit_card</mat-icon>
+            <span>Contas</span>
+          </button>
+
+        <button mat-menu-item>
+              <mat-icon>compare_arrows</mat-icon>
+              <span>Transações</span>
+            </button>
+
+        </mat-menu>
+      <span>Sistema Bancário</span>
+      <span class="spacer"></span>
+      <button mat-icon-button class="icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="icon">
+        <mat-icon>code</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+  

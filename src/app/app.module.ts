@@ -21,14 +21,18 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
 
 // componentes do projeto
-import { NavComponent } from './components/nav/nav.component';
+import { NavigateComponent } from './components/navigate/navigate.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavigateComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +54,7 @@ import { NavComponent } from './components/nav/nav.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
