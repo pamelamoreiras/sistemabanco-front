@@ -26,13 +26,15 @@ import {MatMenuModule} from '@angular/material/menu';
 // componentes do projeto
 import { NavigateComponent } from './components/navigate/navigate.component';
 import { HomeComponent } from './components/home/home.component';
+import { ClientListComponent } from './components/client/client-list/client-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigateComponent,
-    HomeComponent
+    HomeComponent,
+    ClientListComponent
   ],
   imports: [
     BrowserModule,
