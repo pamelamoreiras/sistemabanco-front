@@ -27,6 +27,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { NavigateComponent } from './components/navigate/navigate.component';
 import { HomeComponent } from './components/home/home.component';
 import { ClientListComponent } from './components/client/client-list/client-list.component';
+import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ClientListComponent } from './components/client/client-list/client-list
     AppComponent,
     NavigateComponent,
     HomeComponent,
-    ClientListComponent
+    ClientListComponent,
+    ClientCreateComponent
   ],
   imports: [
     BrowserModule,

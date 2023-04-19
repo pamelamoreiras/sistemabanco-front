@@ -11,7 +11,7 @@ export class NavigateComponent implements OnInit{
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.router.navigate(['clients'])
+    this.router.navigate(['clients/create'])
   }
 
 }
