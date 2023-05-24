@@ -28,6 +28,7 @@ import { NavigateComponent } from './components/navigate/navigate.component';
 import { HomeComponent } from './components/home/home.component';
 import { ClientListComponent } from './components/client/client-list/client-list.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { ClientCreateComponent } from './components/client/client-create/client-
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     HttpClientModule,
     MatFormFieldModule,
     MatPaginatorModule,
@@ -58,7 +59,12 @@ import { ClientCreateComponent } from './components/client/client-create/client-
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      closeButton: true,
+      progressBar: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
