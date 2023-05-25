@@ -21,3 +21,11 @@ h1 {
     width: 100%;
     text-align: center;
   }
+
+.edit {
+  color: rgb(74, 74, 219);
+}
+
+.delete {
+  color: rgb(180, 71, 71);
+}
