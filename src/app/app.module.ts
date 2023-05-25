@@ -29,7 +29,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ClientListComponent } from './components/client/client-list/client-list.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 import { ToastrModule } from 'ngx-toastr';
-
+import { CpfPipe } from './cpf.pipe';
+import { CpfFormatDirective } from './cpf-format.directive';
+import { FormsModule } from '@angular/forms';
+import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { ToastrModule } from 'ngx-toastr';
     NavigateComponent,
     HomeComponent,
     ClientListComponent,
-    ClientCreateComponent
+    ClientCreateComponent,
+    CpfPipe,
+    CpfFormatDirective,
+    ClientUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,8 @@ import { ToastrModule } from 'ngx-toastr';
       timeOut: 3000,
       closeButton: true,
       progressBar: true
-    })
+    }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
