@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountDetailsComponent } from './components/account/account-details/account-details.component';
 import { AccountListComponent } from './components/account/account-list/account-list.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
@@ -29,6 +30,9 @@ const routes: Routes = [
 
       {
         path: 'accounts', component: AccountListComponent
+      },
+      {
+        path: 'accounts/details/:document', component: AccountDetailsComponent
       },
     ]
   }
