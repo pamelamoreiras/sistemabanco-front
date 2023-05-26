@@ -34,6 +34,7 @@ import { CpfFormatDirective } from './cpf-format.directive';
 import { FormsModule } from '@angular/forms';
 import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
+import { AccountListComponent } from './components/account/account-list/account-list.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ClientDeleteComponent } from './components/client/client-delete/client-
     CpfPipe,
     CpfFormatDirective,
     ClientUpdateComponent,
-    ClientDeleteComponent
+    ClientDeleteComponent,
+    AccountListComponent
   ],
   imports: [
     BrowserModule,

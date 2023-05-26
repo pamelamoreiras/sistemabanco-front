@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Client } from '../models/client';
+import { ClientDetails } from '../models/client-details';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,10 @@ export class ClientServiceService {
 
   findAll(): Observable<Client[]> {
     return this.http.get<Client[]>(`${this.baseUrl}`);
+  }
+
+  findAllClientsDetails(): Observable<ClientDetails[]> {
+    return this.http.get<ClientDetails[]>(`${this.baseUrl}/details`);
   }
 
   create(client: Client): Observable<Client> {
