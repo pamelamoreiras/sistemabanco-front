@@ -9,6 +9,7 @@
         <mat-label>Nome</mat-label>
         <input 
         [(ngModel)]="client.name"
+       
         name="name"
         [formControl]="name"
         required
@@ -20,14 +21,18 @@
     <mat-form-field class="fullWidth" appearance="fill">
         <mat-label>CPF</mat-label>
         <input 
+        type="text"
         [(ngModel)]="client.document"
         name="document"
         [formControl]="document"
         required
         matInput 
+        maxlength="11"
         placeholder="Ex.. 11111111111">
         <mat-icon matSuffix>pin</mat-icon>
     </mat-form-field>
+    <p>CPF: {{ client.document | cpf }}</p>
+
 
     <mat-form-field class="fullWidth" appearance="fill">
         <mat-label>Endereço</mat-label>

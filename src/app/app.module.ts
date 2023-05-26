@@ -33,6 +33,7 @@ import { CpfPipe } from './cpf.pipe';
 import { CpfFormatDirective } from './cpf-format.directive';
 import { FormsModule } from '@angular/forms';
 import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
+import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ClientUpdateComponent } from './components/client/client-update/client-
     ClientCreateComponent,
     CpfPipe,
     CpfFormatDirective,
-    ClientUpdateComponent
+    ClientUpdateComponent,
+    ClientDeleteComponent
   ],
   imports: [
     BrowserModule,
