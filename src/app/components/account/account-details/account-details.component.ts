@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { Client } from 'src/app/models/client';
+import {ActivatedRoute } from '@angular/router';
 import { ClientDetails } from 'src/app/models/client-details';
 import { ClientServiceService } from 'src/app/services/client.service.service';
 
