@@ -1,1 +1,27 @@
-<p>account-details works!</p>
+<div class="container mat-elevation-z8">
+
+    <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>{{ client.name }}</mat-card-title>
+          <mat-card-subtitle>Selecione uma conta</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+
+            <mat-list>
+                <div mat-subheader>Contas</div>
+                <mat-list-item routerLink="" *ngFor="let account of client.accounts">
+                    <mat-icon matListItemIcon>credit_card</mat-icon>
+                    <div matListItemTitle>{{ account.numberAccount }}</div>
+                </mat-list-item>
+            </mat-list>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <button routerLink="" mat-button color="primary">Adicionar conta</button>
+          <button routerLink="../../" mat-button>Voltar</button>
+        </mat-card-actions>
+      </mat-card>
+
+      
+</div>
+

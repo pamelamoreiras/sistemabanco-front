@@ -13,8 +13,8 @@ export class ClientServiceService {
 
   constructor(private http: HttpClient) { }
 
-  findByDocument(document: any): Observable<Client> {
-    return this.http.get<Client>(`${this.baseUrl}/details/${document}`);
+  findByDocument(document: any): Observable<ClientDetails> {
+    return this.http.get<ClientDetails>(`${this.baseUrl}/details/${document}`);
   }
 
   findAll(): Observable<Client[]> {
