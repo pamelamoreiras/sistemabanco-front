@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountCreateComponent } from './components/account/account-create/account-create.component';
 import { AccountDetailsComponent } from './components/account/account-details/account-details.component';
 import { AccountListComponent } from './components/account/account-list/account-list.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
@@ -33,6 +34,9 @@ const routes: Routes = [
       },
       {
         path: 'accounts/details/:document', component: AccountDetailsComponent
+      },
+      {
+        path: 'accounts/create', component: AccountCreateComponent
       },
     ]
   }

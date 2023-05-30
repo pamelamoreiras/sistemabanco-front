@@ -36,6 +36,7 @@ import { ClientUpdateComponent } from './components/client/client-update/client-
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 import { AccountListComponent } from './components/account/account-list/account-list.component';
 import { AccountDetailsComponent } from './components/account/account-details/account-details.component';
+import { AccountCreateComponent } from './components/account/account-create/account-create.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AccountDetailsComponent } from './components/account/account-details/ac
     ClientUpdateComponent,
     ClientDeleteComponent,
     AccountListComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    AccountCreateComponent
   ],
   imports: [
     BrowserModule,
