@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router } from '@angular/router';
 import { ClientDetails } from 'src/app/models/client-details';
 import { ClientServiceService } from 'src/app/services/client.service.service';
 
@@ -19,6 +19,7 @@ export class AccountDetailsComponent {
   constructor(
     private clientService: ClientServiceService,
     private route: ActivatedRoute,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -30,6 +31,11 @@ export class AccountDetailsComponent {
     this.clientService.findByDocument(this.client.document).subscribe( response => {
       this.client = response;
     })
+  }
+
+  navigateToCreateAccount() {
+    const documentId = this.client.document;
+    this.router.navigateByUrl(`accounts/create/${documentId}`);
   }
 }
 

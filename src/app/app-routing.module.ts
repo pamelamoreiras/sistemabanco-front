@@ -36,7 +36,7 @@ const routes: Routes = [
         path: 'accounts/details/:document', component: AccountDetailsComponent
       },
       {
-        path: 'accounts/create', component: AccountCreateComponent
+        path: 'accounts/create/:document', component: AccountCreateComponent
       },
     ]
   }
