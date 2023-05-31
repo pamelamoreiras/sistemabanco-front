@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Client } from 'src/app/models/client';
-import { ClientDetails } from 'src/app/models/client-details';
+import { Client } from 'src/app/models/client/client';
+import { ClientDetails } from 'src/app/models/client/client-details';
 import { ClientServiceService } from 'src/app/services/client.service.service';
 
 @Component({

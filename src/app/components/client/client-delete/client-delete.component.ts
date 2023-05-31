@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Client } from 'src/app/models/client';
+import { Client } from 'src/app/models/client/client';
 import { ClientServiceService } from 'src/app/services/client.service.service';
 
 @Component({

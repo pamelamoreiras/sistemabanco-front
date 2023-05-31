@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import {ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Account } from 'src/app/models/account';
-import { ClientDetails } from 'src/app/models/client-details';
+import { Account } from 'src/app/models/account/account';
+import { ClientDetails } from 'src/app/models/client/client-details';
 import { AccountService } from 'src/app/services/account.service';
 import { ClientServiceService } from 'src/app/services/client.service.service';
 

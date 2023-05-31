@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Account } from 'src/app/models/account';
-import { AccountRequest } from 'src/app/models/account-request';
-import { Client } from 'src/app/models/client';
-import { ClientDetails } from 'src/app/models/client-details';
+import { Account } from 'src/app/models/account/account';
+import { AccountRequest } from 'src/app/models/account/account-request';
+import { ClientDetails } from 'src/app/models/client/client-details';
 import { AccountService } from 'src/app/services/account.service';
 import { ClientServiceService } from 'src/app/services/client.service.service';
 
