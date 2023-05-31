@@ -9,3 +9,11 @@
 .accounts {
   padding-top: 20px;
 }
+
+.visibility {
+  color: rgb(74, 74, 219);
+}
+
+.delete {
+  color: rgb(180, 71, 71);
+}

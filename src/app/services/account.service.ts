@@ -15,4 +15,8 @@ export class AccountService {
   createAccount(account: AccountRequest): Observable<AccountRequest> {
     return this.http.post<AccountRequest>(`${this.baseUrl}`, account)
   }
+
+  deleteAccount(accountNumber: any): Observable<AccountRequest> {
+    return this.http.delete<AccountRequest>(`${this.baseUrl}/${accountNumber}`);
+  }
 }
