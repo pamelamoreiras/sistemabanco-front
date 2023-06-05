@@ -33,8 +33,8 @@ export class ClientServiceService {
     return this.http.put<Client>(`${this.baseUrl}/${client.document}`, client);
   }
 
-  deleteByDocument(document: any): Observable<Client> {
-    return this.http.delete<Client>(`${this.baseUrl}/${document}`);
+  deleteByDocument(document: any): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${document}`);
     
   }
 }

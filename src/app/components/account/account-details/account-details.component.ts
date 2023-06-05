@@ -13,6 +13,9 @@ import { ClientServiceService } from 'src/app/services/client.service.service';
   styleUrls: ['./account-details.component.css']
 })
 export class AccountDetailsComponent {
+
+  selectedAccountId: any | null = null;
+
   client: ClientDetails = {
     name: '',
     document: '',
@@ -21,13 +24,15 @@ export class AccountDetailsComponent {
   }
 
   account: Account = {
-    numberAccount: '',
+    id: '',
+    accountNumber: '',
     balance: ''
   }
 
   ELEMENT_DATA: Account[] = [
     {
-      numberAccount: '',
+      id: '',
+      accountNumber: '',
       balance: ''
     }
   ]
@@ -60,6 +65,30 @@ export class AccountDetailsComponent {
   navigateToCreateAccount() {
     const documentId = this.client.document;
     this.router.navigateByUrl(`accounts/create/${documentId}`);
+  }
+
+  delete(id: any): void { 
+
+    if (confirm('Tem certeza que seja deletar esse cliente? ')) {
+
+      this.accountService.deleteAccount(id).subscribe(response => {
+        this.toast.success('Conta deletada com sucesso!', 'Conta');
+        this.findByDocument(); 
+      }, ex => {
+        if(ex.error.errors){
+          ex.error.errors.forEach(element => {
+            this.toast.error(element.message);
+          });
+        } else {
+          this.toast.error(ex.error.message);
+        }
+      })
+    }
+  }
+
+  teste(): void {
+    console.log(this.selectedAccountId);
+    
   }
 }
 

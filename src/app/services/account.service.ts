@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Account } from '../models/account';
-import { AccountRequest } from '../models/account-request';
+import { Account } from '../models/account/account';
+import { AccountRequest } from '../models/account/account-request';
+import { AccountResponse } from '../models/account/account-response';
+import { TransactionHistoryResponse } from '../models/account/transaction-history-response';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +14,15 @@ export class AccountService {
 
   constructor(private http: HttpClient) { }
 
-  createAccount(account: AccountRequest): Observable<AccountRequest> {
-    return this.http.post<AccountRequest>(`${this.baseUrl}`, account)
+  createAccount(account: AccountRequest): Observable<AccountResponse> {
+    return this.http.post<AccountResponse>(`${this.baseUrl}`, account)
   }
 
-  deleteAccount(accountNumber: any): Observable<AccountRequest> {
-    return this.http.delete<AccountRequest>(`${this.baseUrl}/${accountNumber}`);
+  deleteAccount(accountNumber: any): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${accountNumber}`);
+  }
+
+  getHistoryByAccountId(accountId: any): Observable<TransactionHistoryResponse> {
+    return this.http.get<TransactionHistoryResponse>(`${this.baseUrl}/history/${accountId}`)
   }
 }
