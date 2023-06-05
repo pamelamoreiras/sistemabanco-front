@@ -69,7 +69,7 @@ export class AccountDetailsComponent {
 
   delete(id: any): void { 
 
-    if (confirm('Tem certeza que seja deletar esse cliente? ')) {
+    if (confirm('Tem certeza que seja deletar essa conta? ')) {
 
       this.accountService.deleteAccount(id).subscribe(response => {
         this.toast.success('Conta deletada com sucesso!', 'Conta');

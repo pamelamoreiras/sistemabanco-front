@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountCreateComponent } from './components/account/account-create/account-create.component';
 import { AccountDetailsComponent } from './components/account/account-details/account-details.component';
 import { AccountListComponent } from './components/account/account-list/account-list.component';
+import { TransactionHistoryComponent } from './components/account/transaction-history/transaction-history.component';
 import { ClientCreateComponent } from './components/client/client-create/client-create.component';
 import { ClientDeleteComponent } from './components/client/client-delete/client-delete.component';
 import { ClientListComponent } from './components/client/client-list/client-list.component';
@@ -37,6 +38,9 @@ const routes: Routes = [
       },
       {
         path: 'accounts/create/:document', component: AccountCreateComponent
+      },
+      {
+        path: 'accounts/details/:document/history/:id', component: TransactionHistoryComponent
       },
     ]
   }
