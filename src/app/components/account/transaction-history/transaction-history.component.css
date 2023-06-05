@@ -1,0 +1,19 @@
+.container {
+    max-width: 35rem;
+    width: 35rem;
+    margin: 4rem auto auto auto;
+    padding: 1rem;
+    border-radius: .6rem;
+  }
+
+.accounts {
+  padding-top: 20px;
+}
+
+.visibility {
+  color: rgb(74, 74, 219);
+}
+
+.delete {
+  color: rgb(180, 71, 71);
+}

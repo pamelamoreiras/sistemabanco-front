@@ -1,4 +1,6 @@
+
 export interface TransactionHistoryResponse {
+    id: any;
     date: Date;
-    ammount: number;    
+    amount: number;    
 }

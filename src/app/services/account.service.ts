@@ -22,7 +22,9 @@ export class AccountService {
     return this.http.delete<void>(`${this.baseUrl}/${accountNumber}`);
   }
 
-  getHistoryByAccountId(accountId: any): Observable<TransactionHistoryResponse> {
-    return this.http.get<TransactionHistoryResponse>(`${this.baseUrl}/history/${accountId}`)
+  getHistoryByAccountId(accountId: any): Observable<TransactionHistoryResponse[]> {
+    return this.http.get<TransactionHistoryResponse[]>(`${this.baseUrl}/history/${accountId}`)
   }
+
+
 }
