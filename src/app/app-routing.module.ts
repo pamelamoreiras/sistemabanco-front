@@ -41,10 +41,10 @@ const routes: Routes = [
         path: 'accounts/create/:document', component: AccountCreateComponent
       },
       {
-        path: 'accounts/details/:document/history/:id', component: TransactionHistoryComponent
+        path: 'accounts/details/:document/history/:id/:accountNumber', component: TransactionHistoryComponent
       },
       {
-        path: 'accounts/details/:document/history/:id/deposit', component: DepositComponent
+        path: 'accounts/details/:document/history/:id/:accountNumber/deposit', component: DepositComponent
       },
     ]
   }
