@@ -14,7 +14,6 @@ import { ClientServiceService } from 'src/app/services/client.service.service';
   styleUrls: ['./transaction-history.component.css']
 })
 export class TransactionHistoryComponent {
-  selectedAccountId: any | null = null;
 
   client: ClientDetails = {
     name: '',
