@@ -10,6 +10,7 @@ import { ClientListComponent } from './components/client/client-list/client-list
 import { ClientUpdateComponent } from './components/client/client-update/client-update.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavigateComponent } from './components/navigate/navigate.component';
+import { DepositComponent } from './components/account/deposit/deposit.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,9 @@ const routes: Routes = [
       },
       {
         path: 'accounts/details/:document/history/:id', component: TransactionHistoryComponent
+      },
+      {
+        path: 'accounts/details/:document/history/:id/deposit', component: DepositComponent
       },
     ]
   }
