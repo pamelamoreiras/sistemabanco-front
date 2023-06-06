@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Account } from 'src/app/models/account/account';
 import { AccountRequest } from 'src/app/models/account/account-request';
 import { ClientDetails } from 'src/app/models/client/client-details';
 import { AccountService } from 'src/app/services/account.service';
@@ -61,8 +60,6 @@ export class AccountCreateComponent {
       this.toast.success('Conta cadastrada com sucesso!', 'Cadastro');
     }, ex => {
       if(ex.error.errors){
-    console.log(this.account.document);
-    console.log(this.account.accountNumber);
 
         ex.error.errors.forEach(element => {
           this.toast.error(element.message);

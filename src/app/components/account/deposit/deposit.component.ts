@@ -30,7 +30,6 @@ export class DepositComponent {
 
 
   constructor(
-    private clientService: ClientServiceService,
     private accountService: AccountService,
     private toast: ToastrService,
     private router: Router,
@@ -40,6 +39,22 @@ export class DepositComponent {
   ngOnInit(): void {
     const accountNumberString = this.route.snapshot.paramMap.get('accountNumber');
     this.transactionRequest.accountNumber = parseInt(accountNumberString);
+  }
+
+  deposit(): void {
+    this.accountService.deposit(this.transactionRequest).subscribe(response => {
+      this.router.navigate(['accounts'])
+      this.toast.success('Valor Depositado com Sucesso', 'Depósito');
+    }, ex => {
+      if(ex.error.errors){
+
+        ex.error.errors.forEach(element => {
+          this.toast.error(element.message);
+        });
+      } else {
+        this.toast.error(ex.error.message);
+      }
+    })
   }
 
   formValidators(): boolean {

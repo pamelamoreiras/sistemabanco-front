@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Account } from '../models/account/account';
 import { AccountRequest } from '../models/account/account-request';
 import { AccountResponse } from '../models/account/account-response';
 import { TransactionHistoryResponse } from '../models/account/transaction-history-response';
+import { TransactionHistoryRequest } from '../models/account/transaction-history-request';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +24,10 @@ export class AccountService {
 
   getHistoryByAccountId(accountId: any): Observable<TransactionHistoryResponse[]> {
     return this.http.get<TransactionHistoryResponse[]>(`${this.baseUrl}/history/${accountId}`)
+  }
+
+  deposit(transactionRequest: TransactionHistoryRequest): Observable<void> {
+    return this.http.post<void>(`${this.baseUrl}/deposit`, transactionRequest)
   }
 
 
