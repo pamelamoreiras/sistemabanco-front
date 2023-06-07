@@ -7,12 +7,11 @@ import { TransactionHistoryRequest } from 'src/app/models/account/transaction-hi
 import { AccountService } from 'src/app/services/account.service';
 
 @Component({
-  selector: 'app-deposit',
-  templateUrl: './deposit.component.html',
-  styleUrls: ['./deposit.component.css']
+  selector: 'app-withdraw',
+  templateUrl: './withdraw.component.html',
+  styleUrls: ['./withdraw.component.css']
 })
-export class DepositComponent {
-
+export class WithdrawComponent {
   account: AccountRequest = {
     accountNumber: '',
     document: ''

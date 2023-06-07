@@ -39,6 +39,7 @@ import { AccountDetailsComponent } from './components/account/account-details/ac
 import { AccountCreateComponent } from './components/account/account-create/account-create.component';
 import { TransactionHistoryComponent } from './components/account/transaction-history/transaction-history.component';
 import { DepositComponent } from './components/account/deposit/deposit.component';
+import { WithdrawComponent } from './components/account/withdraw/withdraw.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { DepositComponent } from './components/account/deposit/deposit.component
     AccountDetailsComponent,
     AccountCreateComponent,
     TransactionHistoryComponent,
-    DepositComponent
+    DepositComponent,
+    WithdrawComponent
   ],
   imports: [
     BrowserModule,

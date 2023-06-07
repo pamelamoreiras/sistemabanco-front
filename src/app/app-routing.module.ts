@@ -11,6 +11,7 @@ import { ClientUpdateComponent } from './components/client/client-update/client-
 import { HomeComponent } from './components/home/home.component';
 import { NavigateComponent } from './components/navigate/navigate.component';
 import { DepositComponent } from './components/account/deposit/deposit.component';
+import { WithdrawComponent } from './components/account/withdraw/withdraw.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,9 @@ const routes: Routes = [
       },
       {
         path: 'accounts/details/:document/history/:id/:accountNumber/deposit', component: DepositComponent
+      },
+      {
+        path: 'accounts/details/:document/history/:id/:accountNumber/withdraw', component: WithdrawComponent
       },
     ]
   }

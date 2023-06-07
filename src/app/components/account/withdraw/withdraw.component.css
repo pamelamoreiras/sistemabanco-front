@@ -1,0 +1,33 @@
+.container {
+    width: 35rem;
+    margin: 4rem auto auto auto;
+    padding: 1rem 1rem 3rem 1rem;
+    border-radius: .6rem;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    text-align: center;
+    max-height: 20rem;
+    margin: auto;
+    
+}
+
+mat-form-field {
+    margin-top: 10px;
+}
+
+button {
+    margin-bottom: 7px;
+}
+
+mat-icon {
+    opacity: .7;
+}
