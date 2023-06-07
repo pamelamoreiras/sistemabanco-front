@@ -1,5 +1,5 @@
 .container {
-    width: 35rem;
+    width: 25rem;
     margin: 4rem auto auto auto;
     padding: 1rem 1rem 3rem 1rem;
     border-radius: .6rem;
@@ -15,9 +15,9 @@ h1 {
 
 img {
     text-align: center;
-    max-height: 20rem;
+    max-height: 40rem;
     margin: auto;
-    
+    padding-bottom: 10px;
 }
 
 mat-form-field {

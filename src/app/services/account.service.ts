@@ -30,5 +30,7 @@ export class AccountService {
     return this.http.post<void>(`${this.baseUrl}/deposit`, transactionRequest)
   }
 
-
+  withdraw(transactionRequest: TransactionHistoryRequest): Observable<void> {
+    return this.http.post<void>(`${this.baseUrl}/withdraw`, transactionRequest)
+  }
 }

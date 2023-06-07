@@ -38,10 +38,10 @@ export class WithdrawComponent {
     this.transactionRequest.accountNumber = parseInt(accountNumberString);
   }
 
-  deposit(): void {
-    this.accountService.deposit(this.transactionRequest).subscribe(response => {
+  withdraw(): void {
+    this.accountService.withdraw(this.transactionRequest).subscribe(response => {
       this.router.navigate(['accounts'])
-      this.toast.success('Valor Depositado com Sucesso', 'Depósito');
+      this.toast.success('Valor Sacado com Sucesso', 'Saque');
     }, ex => {
       if(ex.error.errors){
 
