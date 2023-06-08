@@ -26,15 +26,23 @@
               <td mat-cell *matCellDef="let element"> {{element.address}} </td>
             </ng-container>
   
-            <ng-container matColumnDef="actions">
-              <th mat-header-cell *matHeaderCellDef> Ações </th>
+            <ng-container matColumnDef="visibility">
+              <th mat-header-cell *matHeaderCellDef> Visualizar </th>
               <td mat-cell *matCellDef="let element"> 
-                <a routerLink="details/{{element.document}}">
-                  <i class="material-icons visibility">visibility</i>
-                </a>  
-                <a routerLink="create/{{element.document}}">
-                  <i class="material-icons note_add">note_add</i>
-                </a>
+
+                <button mat-icon-button color="primary" routerLink="details/{{element.document}}">
+                  <mat-icon>visibility</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="add-account">
+              <th mat-header-cell *matHeaderCellDef> Adicionar Conta </th>
+              <td mat-cell *matCellDef="let element"> 
+
+                <button mat-icon-button color="warn" routerLink="create/{{element.document}}">
+                  <mat-icon>note_add</mat-icon>
+                </button>
               </td>
             </ng-container>
         

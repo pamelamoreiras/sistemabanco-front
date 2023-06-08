@@ -21,7 +21,7 @@ export class AccountListComponent implements OnInit{
     }
   ]
 
-  displayedColumns: string[] = ['name', 'document', 'address',  'actions'];
+  displayedColumns: string[] = ['name', 'document', 'address', 'visibility', 'add-account'];
   dataSource = new MatTableDataSource<Client>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

@@ -37,7 +37,7 @@ export class AccountDetailsComponent {
     }
   ]
 
-  displayedColumns: string[] = ['account', 'actions'];
+  displayedColumns: string[] = ['account', 'transactions', 'delete'];
   dataSource = new MatTableDataSource<Account>(this.client.accounts);
 
 
